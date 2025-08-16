@@ -62,80 +62,102 @@
 						</p>
 					</section>
 
-					<div class="row">
-						<div class="col-lg-8">
+					<div class="row g-4">
+						<div class="col-12 col-lg-8">
 							<section
-								class="main__contact-form contact-form-section bg-white p-4 rounded shadow-sm mb-4">
-								<h3 class="contact-form-section__title text-dark mb-3">
+								class="main__contact-form contact-form-section bg-white p-4 rounded shadow-sm">
+								<h3 class="contact-form-section__title h4 text-dark mb-3">
 									Formulario de contacto
 								</h3>
 								<form
 									action="#success"
 									method="get"
 									class="contact-form-section__form contact-form">
-									<div class="mb-3">
-										<label class="form-label fw-bold" for="nombre"
-											>Nombre:</label
-										>
-										<input
-											class="form-control"
-											type="text"
-											id="nombre"
-											name="nombre"
-											required />
+									<div class="row g-3">
+										<div class="col-12 col-md-6">
+											<label class="form-label fw-bold" for="nombre"
+												>Nombre:</label
+											>
+											<input
+												class="form-control"
+												type="text"
+												id="nombre"
+												name="nombre"
+												required />
+										</div>
+										<div class="col-12 col-md-6">
+											<label class="form-label fw-bold" for="email">Email:</label>
+											<input
+												class="form-control"
+												type="email"
+												id="email"
+												name="email"
+												required />
+										</div>
+										<div class="col-12">
+											<label class="form-label fw-bold" for="asunto"
+												>Asunto:</label
+											>
+											<select class="form-select" id="asunto" name="asunto">
+												<option value="consulta">Consulta general</option>
+												<option value="proyecto">Proyecto</option>
+												<option value="colaboracion">Colaboración</option>
+											</select>
+										</div>
+										<div class="col-12">
+											<label class="form-label fw-bold" for="mensaje"
+												>Mensaje:</label
+											>
+											<textarea
+												class="form-control"
+												id="mensaje"
+												name="mensaje"
+												rows="5"
+												required></textarea>
+										</div>
+										<div class="col-12">
+											<button type="submit" class="btn btn-primary btn-lg">
+												Enviar mensaje
+											</button>
+										</div>
 									</div>
-									<div class="mb-3">
-										<label class="form-label fw-bold" for="email">Email:</label>
-										<input
-											class="form-control"
-											type="email"
-											id="email"
-											name="email"
-											required />
-									</div>
-									<div class="mb-3">
-										<label class="form-label fw-bold" for="asunto"
-											>Asunto:</label
-										>
-										<select class="form-select" id="asunto" name="asunto">
-											<option value="consulta">Consulta general</option>
-											<option value="proyecto">Proyecto</option>
-											<option value="colaboracion">Colaboración</option>
-										</select>
-									</div>
-									<div class="mb-3">
-										<label class="form-label fw-bold" for="mensaje"
-											>Mensaje:</label
-										>
-										<textarea
-											class="form-control"
-											id="mensaje"
-											name="mensaje"
-											rows="5"
-											required></textarea>
-									</div>
-									<button type="submit" class="btn btn-primary">
-										Enviar mensaje
-									</button>
 								</form>
 							</section>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-12 col-lg-4">
 							<section
-								class="main__contact-info contact-info bg-white p-4 rounded shadow-sm">
-								<h3 class="contact-info__title text-dark mb-3">
+								class="main__contact-info contact-info bg-white p-4 rounded shadow-sm h-100">
+								<h3 class="contact-info__title h4 text-dark mb-3">
 									Información de contacto
 								</h3>
 								<address class="contact-info__address">
-									<p class="contact-info__item mb-2">
-										<strong>Email:</strong> contacto@guidoespinoza.dev
-									</p>
-									<p class="contact-info__item mb-2">
-										<strong>Teléfono:</strong> +56 9 9999 9999
-									</p>
-									<p class="contact-info__item mb-0">
-										<strong>Dirección:</strong> Santiago, Chile
-									</p>
+									<div class="d-flex align-items-center mb-3">
+										<div class="me-3 text-primary">
+											<i class="fs-4">📧</i>
+										</div>
+										<div>
+											<strong>Email:</strong><br>
+											<span class="text-muted">contacto@guidoespinoza.dev</span>
+										</div>
+									</div>
+									<div class="d-flex align-items-center mb-3">
+										<div class="me-3 text-primary">
+											<i class="fs-4">📞</i>
+										</div>
+										<div>
+											<strong>Teléfono:</strong><br>
+											<span class="text-muted">+56 9 9999 9999</span>
+										</div>
+									</div>
+									<div class="d-flex align-items-center">
+										<div class="me-3 text-primary">
+											<i class="fs-4">📍</i>
+										</div>
+										<div>
+											<strong>Dirección:</strong><br>
+											<span class="text-muted">Santiago, Chile</span>
+										</div>
+									</div>
 								</address>
 							</section>
 						</div>

@@ -59,4 +59,38 @@
     .carousel-control-next {
         right: -20px;
     }
+
+    /* Ajustes para tipografía móvil */
+    .hero__title {
+        font-size: 2rem !important;
+    }
+
+    .hero__subtitle {
+        font-size: 1.1rem !important;
+    }
+
+    /* Espaciado mejorado para móviles */
+    .profile__image img {
+        max-width: 200px;
+    }
+
+    /* Cards más legibles en móvil */
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mejoras para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .video__iframe {
+        height: 300px;
+    }
+
+    .profile__image img {
+        max-width: 250px;
+    }
 }

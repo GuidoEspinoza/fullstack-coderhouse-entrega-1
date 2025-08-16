@@ -52,13 +52,15 @@
 				<div class="col-12">
 					<section
 						class="main__about about bg-primary bg-opacity-10 p-4 rounded text-center mb-4">
-						<h1 class="about__title text-dark mb-3">Acerca de mí</h1>
-						<img
-							class="about__profile-img rounded-circle border border-4 border-primary mb-3"
-							style="max-width: 200px"
-							src="https://placehold.co/300x300"
-							alt="Foto de perfil" />
-						<p class="about__desc text-muted">
+						<h1 class="about__title display-5 text-dark mb-4">Acerca de mí</h1>
+						<div class="profile__image mb-3">
+							<img
+								class="about__profile-img rounded-circle border border-4 border-primary img-fluid"
+								style="max-width: 250px; width: 100%"
+								src="https://placehold.co/300x300"
+								alt="Foto de perfil" />
+						</div>
+						<p class="about__desc lead text-muted">
 							Soy un desarrollador web apasionado por crear experiencias
 							digitales increíbles. Me especializo en tecnologías front-end y
 							back-end.
@@ -69,22 +71,43 @@
 						class="main__skills skills bg-white p-4 rounded shadow-sm mb-4">
 						<h3 class="skills__title text-dark mb-3">Mis habilidades</h3>
 						<div class="skills__container row g-3">
-							<div class="col-md-6">
-								<div
-									class="skills__category bg-light p-3 rounded text-center h-100">
-									<h4 class="skills__category-title text-dark">Frontend</h4>
-									<p class="skills__category-desc text-muted">
-										HTML, CSS, JavaScript
-									</p>
+							<div class="col-12 col-md-6 col-lg-4">
+								<div class="card h-100 border-0 shadow-sm">
+									<div class="card-body text-center">
+										<div class="display-4 text-primary mb-3">💻</div>
+										<h4 class="card-title skills__category-title text-dark">
+											Frontend
+										</h4>
+										<p class="card-text skills__category-desc text-muted">
+											HTML, CSS, JavaScript y React
+										</p>
+									</div>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div
-									class="skills__category bg-light p-3 rounded text-center h-100">
-									<h4 class="skills__category-title text-dark">Backend</h4>
-									<p class="skills__category-desc text-muted">
-										Node.js, Python, Bases de datos
-									</p>
+							<div class="col-12 col-md-6 col-lg-4">
+								<div class="card h-100 border-0 shadow-sm">
+									<div class="card-body text-center">
+										<div class="display-4 text-success mb-3">⚙️</div>
+										<h4 class="card-title skills__category-title text-dark">
+											Backend
+										</h4>
+										<p class="card-text skills__category-desc text-muted">
+											Node.js, Bases de datos, APIs
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-md-12 col-lg-4">
+								<div class="card h-100 border-0 shadow-sm">
+									<div class="card-body text-center">
+										<div class="display-4 text-warning mb-3">🛠️</div>
+										<h4 class="card-title skills__category-title text-dark">
+											Herramientas
+										</h4>
+										<p class="card-text skills__category-desc text-muted">
+											Git, VS Code, Bootstrap
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -95,8 +118,11 @@
 						<div class="video__container ratio ratio-16x9">
 							<iframe
 								class="video__iframe"
-								src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-								title="Video presentación"
+								src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=CZJXEZPXFhQhyoXC"
+								title="Video Presentación"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerpolicy="strict-origin-when-cross-origin"
 								allowfullscreen></iframe>
 						</div>
 					</section>
