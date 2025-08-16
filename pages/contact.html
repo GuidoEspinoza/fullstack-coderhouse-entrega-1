@@ -70,7 +70,7 @@
 									Formulario de contacto
 								</h3>
 								<form
-									action="confirmation.html"
+									action="#success"
 									method="get"
 									class="contact-form-section__form contact-form">
 									<div class="mb-3">
@@ -143,6 +143,24 @@
 				</div>
 			</div>
 		</main>
+
+		<!-- Mensaje de confirmación (aparece cuando el formulario se envía) -->
+		<div id="success" class="position-fixed top-0 start-0 w-100 h-100 d-none" style="background: rgba(0,0,0,0.5); z-index: 9999;">
+			<div class="d-flex align-items-center justify-content-center h-100">
+				<div class="bg-white rounded shadow-lg p-4 mx-3" style="max-width: 500px;">
+					<div class="text-center">
+						<div class="text-success display-1 mb-3">✅</div>
+						<h3 class="text-success mb-3">¡Mensaje Enviado!</h3>
+						<p class="lead mb-2">Gracias por contactarnos.</p>
+						<p class="text-muted mb-4">Hemos recibido tu mensaje y te responderemos a la brevedad posible.</p>
+						<div class="d-flex gap-2 justify-content-center flex-wrap">
+							<a href="#" class="btn btn-outline-secondary">Enviar otro mensaje</a>
+							<a href="../index.html" class="btn btn-primary">Volver al inicio</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<footer class="footer bg-dark text-white-50 py-3 mt-4 border-top shadow-sm">
 			<div class="container text-center">

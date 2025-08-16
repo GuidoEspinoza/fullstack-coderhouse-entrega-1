@@ -68,17 +68,46 @@
 						<h3 class="features__title text-dark mb-3">
 							Características destacadas
 						</h3>
-						<ul class="features__list list-unstyled">
-							<li class="features__item py-2 ps-4 position-relative">
-								Diseño responsivo
-							</li>
-							<li class="features__item py-2 ps-4 position-relative">
-								Navegación sencilla
-							</li>
-							<li class="features__item py-2 ps-4 position-relative">
-								Contenido organizado
-							</li>
-						</ul>
+						
+						<!-- Carousel de Bootstrap -->
+						<div id="featuresCarousel" class="carousel slide" data-bs-ride="carousel">
+							<div class="carousel-indicators">
+								<button type="button" data-bs-target="#featuresCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+								<button type="button" data-bs-target="#featuresCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+								<button type="button" data-bs-target="#featuresCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+							</div>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<div class="d-block w-100 text-center p-4">
+										<div class="display-4 text-success mb-3">📱</div>
+										<h4>Diseño Responsivo</h4>
+										<p class="text-muted">Nuestro sitio se adapta perfectamente a cualquier dispositivo, desde móviles hasta desktop.</p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="d-block w-100 text-center p-4">
+										<div class="display-4 text-primary mb-3">🧭</div>
+										<h4>Navegación Sencilla</h4>
+										<p class="text-muted">Interface intuitiva que permite a los usuarios encontrar lo que buscan rápidamente.</p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="d-block w-100 text-center p-4">
+										<div class="display-4 text-warning mb-3">📋</div>
+										<h4>Contenido Organizado</h4>
+										<p class="text-muted">Información estructurada y fácil de consumir para una mejor experiencia de usuario.</p>
+									</div>
+								</div>
+							</div>
+							<button class="carousel-control-prev" type="button" data-bs-target="#featuresCarousel" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#featuresCarousel" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
 					</section>
 
 					<article

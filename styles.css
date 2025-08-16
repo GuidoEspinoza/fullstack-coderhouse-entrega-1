@@ -12,9 +12,51 @@
     top        : 0.5rem;
 }
 
+#success:target {
+    display        : flex !important;
+    justify-content: center;
+}
+
+/* Estilos para las flechas del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+    height   : 50px;
+    top      : 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
 /* Responsive para iframe de video */
 @media (max-width: 768px) {
     .video__iframe {
         height: 200px;
+    }
+
+    /* Flechas del carrusel más pequeñas en mobile */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width        : 40px;
+        height       : 40px;
+        margin       : 0;
+        border-radius: 50%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width : 20px;
+        height: 20px;
+    }
+
+    /* Posicionar las flechas más hacia los bordes en mobile */
+    .carousel-control-prev {
+        left: -20px;
+    }
+
+    .carousel-control-next {
+        right: -20px;
     }
 }
