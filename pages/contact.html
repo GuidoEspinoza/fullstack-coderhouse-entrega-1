@@ -1,68 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web - Contacto</title>
-    <link rel="stylesheet" href="../styles.css">
-</head>
-<body>
-    <header>
-        <h1>Mi Sitio Web</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="about.html">Acerca de</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mi Sitio Web - Contacto</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+			crossorigin="anonymous" />
+		<link rel="stylesheet" href="../styles.css" />
+	</head>
+	<body class="d-flex flex-column min-vh-100 bg-light">
+		<header class="header mb-4">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm py-3">
+				<div class="container">
+					<a class="navbar-brand header__logo fw-bold fs-3" href="#"
+						>Mi Sitio Web</a
+					>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarNav"
+						aria-controls="navbarNav"
+						aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav ms-auto gap-2">
+							<li class="nav-item">
+								<a class="nav-link" href="../index.html">Inicio</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="about.html">Acerca de</a>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link active"
+									aria-current="page"
+									href="contact.html"
+									>Contacto</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
 
-    <main>
-        <section class="contact-intro">
-            <h2>Contacto</h2>
-            <p>¿Tienes alguna pregunta? ¡Me encantaría saber de ti! Completa el formulario a continuación.</p>
-        </section>
+		<main class="container flex-grow-1">
+			<div class="row">
+				<div class="col-12">
+					<section
+						class="main__contact-intro contact-intro bg-white p-4 rounded shadow-sm mb-4">
+						<h1 class="contact-intro__title text-dark mb-3">Contacto</h1>
+						<p class="contact-intro__desc text-muted">
+							¿Tienes alguna pregunta? ¡Me encantaría saber de ti! Completa el
+							formulario a continuación.
+						</p>
+					</section>
 
-        <section class="contact-form-section">
-            <h3>Formulario de contacto</h3>
-            <form action="confirmation.html" method="get" class="contact-form">
-                <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="asunto">Asunto:</label>
-                    <select id="asunto" name="asunto">
-                        <option value="consulta">Consulta general</option>
-                        <option value="proyecto">Proyecto</option>
-                        <option value="colaboracion">Colaboración</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn-primary">Enviar mensaje</button>
-            </form>
-        </section>
+					<div class="row">
+						<div class="col-lg-8">
+							<section
+								class="main__contact-form contact-form-section bg-white p-4 rounded shadow-sm mb-4">
+								<h3 class="contact-form-section__title text-dark mb-3">
+									Formulario de contacto
+								</h3>
+								<form
+									action="confirmation.html"
+									method="get"
+									class="contact-form-section__form contact-form">
+									<div class="mb-3">
+										<label class="form-label fw-bold" for="nombre"
+											>Nombre:</label
+										>
+										<input
+											class="form-control"
+											type="text"
+											id="nombre"
+											name="nombre"
+											required />
+									</div>
+									<div class="mb-3">
+										<label class="form-label fw-bold" for="email">Email:</label>
+										<input
+											class="form-control"
+											type="email"
+											id="email"
+											name="email"
+											required />
+									</div>
+									<div class="mb-3">
+										<label class="form-label fw-bold" for="asunto"
+											>Asunto:</label
+										>
+										<select class="form-select" id="asunto" name="asunto">
+											<option value="consulta">Consulta general</option>
+											<option value="proyecto">Proyecto</option>
+											<option value="colaboracion">Colaboración</option>
+										</select>
+									</div>
+									<div class="mb-3">
+										<label class="form-label fw-bold" for="mensaje"
+											>Mensaje:</label
+										>
+										<textarea
+											class="form-control"
+											id="mensaje"
+											name="mensaje"
+											rows="5"
+											required></textarea>
+									</div>
+									<button type="submit" class="btn btn-primary">
+										Enviar mensaje
+									</button>
+								</form>
+							</section>
+						</div>
+						<div class="col-lg-4">
+							<section
+								class="main__contact-info contact-info bg-white p-4 rounded shadow-sm">
+								<h3 class="contact-info__title text-dark mb-3">
+									Información de contacto
+								</h3>
+								<address class="contact-info__address">
+									<p class="contact-info__item mb-2">
+										<strong>Email:</strong> contacto@guidoespinoza.dev
+									</p>
+									<p class="contact-info__item mb-2">
+										<strong>Teléfono:</strong> +56 9 9999 9999
+									</p>
+									<p class="contact-info__item mb-0">
+										<strong>Dirección:</strong> Santiago, Chile
+									</p>
+								</address>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
 
-        <section class="contact-info">
-            <h3>Información de contacto</h3>
-            <address>
-                <p><strong>Email:</strong> contacto@guidoespinoza.dev</p>
-                <p><strong>Teléfono:</strong> +56 9 9999 9999</p>
-                <p><strong>Dirección:</strong> Santiago, Chile</p>
-            </address>
-        </section>
-    </main>
+		<footer class="footer bg-dark text-white-50 py-3 mt-4 border-top shadow-sm">
+			<div class="container text-center">
+				<span class="footer__copyright"
+					>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</span
+				>
+			</div>
+		</footer>
 
-    <footer>
-        <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
-    </footer>
-</body>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+			crossorigin="anonymous"></script>
+	</body>
 </html>
