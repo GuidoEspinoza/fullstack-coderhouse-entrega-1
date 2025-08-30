@@ -57,7 +57,9 @@ pre-entrega/
 │   ├── _components.scss    # Componentes específicos (hero, cards, etc.)
 │   ├── _animations.scss    # Keyframes y animaciones CSS
 │   └── _responsive.scss    # Media queries y responsive design
-└── assets/                 # Carpeta para recursos (reservada)
+└── assets/                 # Recursos del proyecto
+    ├── desarrollo-web.jpg  # Imagen para el artículo destacado
+    └── profile_image_new.jpeg # Foto de perfil para página About
 ```
 
 ## 🎯 Páginas del Sitio
