@@ -1,0 +1,247 @@
+// * ===== RESPONSIVE DESIGN SCSS =====
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// * Desktop first approach - mejoras progresivas
+@include mobile-up {
+  .hero {
+    &__image-container {
+      margin: 0 auto;
+      max-width: 66.666667%; // * col-md-8 equivalent
+    }
+  }
+  
+  .skills {
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include desktop {
+  .hero {
+    &__image-container {
+      max-width: 50%; // * col-lg-6 equivalent
+    }
+  }
+  
+  .skills {
+    &__container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// * Mobile responsive
+@include mobile {
+  // * Prevenir scroll horizontal
+  body {
+    overflow-x: hidden;
+  }
+  
+  // * Hero section
+  .hero {
+    padding: $spacing-md;
+    
+    &__title {
+      font-size: $font-size-xxl;
+    }
+    
+    &__subtitle {
+      font-size: 1.1rem;
+    }
+    
+    &__image-container {
+      max-width: 100%;
+    }
+  }
+  
+  // * About section
+  .about {
+    padding: $spacing-md;
+    
+    &__title {
+      font-size: $font-size-xl;
+    }
+    
+    &__profile-img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+  // * Skills section
+  .skills {
+    padding: $spacing-md;
+    
+    &__container {
+      grid-template-columns: 1fr;
+      gap: $spacing-sm;
+    }
+  }
+  
+  // * Contact layout
+  .contact {
+    &__layout {
+      grid-template-columns: 1fr;
+      gap: $spacing-md;
+    }
+    
+    &__form-section,
+    &__info-section {
+      padding: $spacing-md;
+    }
+  }
+  
+  .contact-intro {
+    padding: $spacing-md;
+    
+    &__title {
+      font-size: $font-size-xxl;
+    }
+  }
+  
+  // * Form responsive
+  .form {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: $spacing-sm;
+    }
+  }
+  
+  // * Carousel responsive
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    border-radius: $border-radius-circle;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  // * Video responsive
+  .video {
+    padding: $spacing-md;
+    
+    &__iframe {
+      height: 200px;
+    }
+  }
+  
+  // * Modal responsive
+  .modal-actions {
+    flex-direction: column;
+  }
+  
+  .modal-content {
+    margin: $spacing-sm;
+    padding: $spacing-md;
+  }
+  
+  // * Article responsive
+  .article {
+    padding: $spacing-md;
+  }
+  
+  // * Features responsive
+  .features {
+    padding: $spacing-md;
+  }
+  
+  // * Navbar responsive adjustments
+  .navbar-container {
+    padding: $spacing-sm 0.75rem;
+  }
+  
+  // * Content wrapper adjustments
+  .content-wrapper {
+    margin-top: $spacing-md;
+  }
+  
+  // * Main container adjustments
+  .main-container {
+    padding: 0 $spacing-sm;
+  }
+}
+
+// * Tablet responsive
+@include tablet {
+  .video {
+    &__iframe {
+      height: 300px;
+    }
+  }
+  
+  .about {
+    &__profile-img {
+      width: 225px;
+      height: 225px;
+    }
+  }
+  
+  .hero {
+    &__title {
+      font-size: 2.25rem;
+    }
+  }
+  
+  .skills {
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// * Asegurar que no haya scroll horizontal en ningún breakpoint
+* {
+  max-width: 100%;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+// * Contenedores que podrían causar overflow
+.container, .container-fluid, .row {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+// * Bootstrap carousel responsive fixes
+.carousel {
+  overflow: hidden;
+  
+  .carousel-inner {
+    overflow: hidden;
+  }
+  
+  .carousel-item {
+    overflow: hidden;
+  }
+}
+
+// * Asegurar que el navbar no cause overflow
+.navbar {
+  overflow-x: hidden;
+  
+  .navbar-nav {
+    overflow-x: hidden;
+  }
+}
+
+// * Grid responsive fixes
+.row {
+  margin-left: 0;
+  margin-right: 0;
+  
+  [class*="col-"] {
+    padding-left: $spacing-sm;
+    padding-right: $spacing-sm;
+  }
+}

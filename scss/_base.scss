@@ -1,0 +1,133 @@
+// * ===== BASE STYLES SCSS =====
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// * Reset básico
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// * Body base
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $light-color;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  color: $dark-color;
+}
+
+// * Contenedores principales
+.navbar-container {
+  @include container-base;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-md 0.75rem;
+}
+
+.main-container {
+  flex: 1;
+  @include container-base;
+}
+
+.content-wrapper {
+  margin-top: $spacing-lg;
+  min-height: calc(100vh - 200px);
+}
+
+// * Header
+.header {
+  margin-bottom: $spacing-lg;
+  
+  &__logo {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-md;
+  }
+}
+
+// * Footer
+.footer {
+  background-color: $navbar-dark;
+  color: $text-light;
+  text-align: center;
+  padding: $spacing-md 0;
+  margin-top: $spacing-lg;
+  border-top: 1px solid #dee2e6;
+  box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  
+  &__container {
+    @include container-base;
+  }
+  
+  &__copyright {
+    @extend %text-muted;
+    color: $text-light;
+  }
+}
+
+// * Utilidades de texto Bootstrap
+.text-muted {
+  color: $muted-color !important;
+}
+
+.text-dark {
+  color: $dark-color !important;
+}
+
+.text-primary {
+  color: $primary-color !important;
+}
+
+.text-success {
+  color: $success-color !important;
+}
+
+.text-warning {
+  color: $warning-color !important;
+}
+
+// * Bootstrap navbar overrides
+.navbar-brand {
+  font-size: $font-size-md !important;
+  font-weight: $font-weight-bold !important;
+}
+
+.navbar-nav {
+  .nav-link {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-weight: $font-weight-normal !important;
+    padding: $spacing-sm $spacing-md !important;
+    @include smooth-transition(color);
+    
+    &:hover,
+    &:focus {
+      color: $white !important;
+    }
+    
+    &.active {
+      color: $white !important;
+      font-weight: $font-weight-normal !important;
+    }
+  }
+}
+
+// * Responsive navbar
+@include mobile {
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+  
+  .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
+  
+  .navbar-nav {
+    flex-direction: column;
+    padding-top: $spacing-sm;
+  }
+}

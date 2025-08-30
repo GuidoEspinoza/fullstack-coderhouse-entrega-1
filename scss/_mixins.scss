@@ -1,0 +1,113 @@
+// * ===== MIXINS Y EXTENDS SCSS =====
+@use 'variables' as *;
+
+// * Mixin para contenedores principales
+@mixin container-base {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+  width: 100%;
+}
+
+// * Mixin para secciones con fondo blanco
+@mixin section-card {
+  background-color: $white;
+  padding: $spacing-lg;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-sm;
+  margin-bottom: $spacing-lg;
+}
+
+// * Mixin para títulos de sección
+@mixin section-title {
+  color: $dark-color;
+  margin-bottom: $spacing-md;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-medium;
+}
+
+// * Mixin para responsive breakpoints
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$mobile + 1px}) and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$tablet + 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-up {
+  @media (min-width: $mobile) {
+    @content;
+  }
+}
+
+// * Mixin para centrar elementos
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// * Mixin para transiciones suaves
+@mixin smooth-transition($property: all) {
+  transition: $property $transition-normal;
+}
+
+// * Mixin para hover effects
+@mixin hover-lift {
+  @include smooth-transition(transform);
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@mixin hover-scale {
+  @include smooth-transition(transform);
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// * Extend para texto muted
+%text-muted {
+  color: $muted-color;
+}
+
+// * Extend para botones base
+%button-base {
+  border: none;
+  border-radius: $border-radius;
+  padding: $spacing-sm $spacing-md;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  @include smooth-transition();
+  
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+// * Extend para cards
+%card-base {
+  background-color: $white;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-sm;
+  overflow: hidden;
+  @include smooth-transition(box-shadow);
+  
+  &:hover {
+    box-shadow: $box-shadow-md;
+  }
+}

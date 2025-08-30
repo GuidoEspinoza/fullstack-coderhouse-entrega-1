@@ -11,10 +11,10 @@
 			crossorigin="anonymous" />
 		<link rel="stylesheet" href="../styles.css" />
 	</head>
-	<body class="d-flex flex-column min-vh-100 bg-light">
-		<header class="header mb-4">
+	<body class="body">
+		<header class="header">
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm py-3">
-				<div class="container">
+				<div class="navbar-container">
 					<a class="navbar-brand header__logo fw-bold fs-3" href="#"
 						>Mi Sitio Web</a
 					>
@@ -47,31 +47,27 @@
 			</nav>
 		</header>
 
-		<main class="container flex-grow-1">
-			<div class="row">
-				<div class="col-12">
-					<section
-						class="main__about about bg-primary bg-opacity-10 p-4 rounded text-center mb-4">
-						<h1 class="about__title display-5 text-dark mb-4">Acerca de mí</h1>
-						<div class="profile__image mb-3">
-							<img
-								class="about__profile-img rounded-circle border border-4 border-primary img-fluid"
-								style="max-width: 250px; width: 100%"
-								src="https://placehold.co/300x300"
-								alt="Foto de perfil" />
-						</div>
-						<p class="about__desc lead text-muted">
-							Soy un desarrollador web apasionado por crear experiencias
-							digitales increíbles. Me especializo en tecnologías front-end y
-							back-end.
-						</p>
-					</section>
+		<main class="main-container">
+			<div class="content-wrapper">
+					<section class="main__about about animate-fade-in">
+				<h1 class="about__title animate-slide-in-left">Acerca de mí</h1>
+				<div class="about__profile-container animate-bounce animate-delay-1">
+					<img
+						class="about__profile-img hover-scale"
+						src="../assets/profile_image_new.jpeg"
+						alt="Foto de perfil" />
+				</div>
+				<p class="about__desc animate-slide-in-right animate-delay-2">
+					Soy un desarrollador web apasionado por crear experiencias
+					digitales increíbles. Me especializo en tecnologías front-end y
+					back-end.
+				</p>
+			</section>
 
-					<section
-						class="main__skills skills bg-white p-4 rounded shadow-sm mb-4">
-						<h3 class="skills__title text-dark mb-3">Mis habilidades</h3>
-						<div class="skills__container row g-3">
-							<div class="col-12 col-md-6 col-lg-4">
+					<section class="main__skills skills animate-fade-in animate-delay-3">
+				<h3 class="skills__title animate-slide-in-left">Mis habilidades</h3>
+						<div class="skills__container">
+							<div class="skills__card">
 								<div class="card h-100 border-0 shadow-sm">
 									<div class="card-body text-center">
 										<div class="display-4 text-primary mb-3">💻</div>
@@ -84,7 +80,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-12 col-md-6 col-lg-4">
+							<div class="skills__card">
 								<div class="card h-100 border-0 shadow-sm">
 									<div class="card-body text-center">
 										<div class="display-4 text-success mb-3">⚙️</div>
@@ -97,7 +93,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-12 col-md-12 col-lg-4">
+							<div class="skills__card">
 								<div class="card h-100 border-0 shadow-sm">
 									<div class="card-body text-center">
 										<div class="display-4 text-warning mb-3">🛠️</div>
@@ -113,8 +109,8 @@
 						</div>
 					</section>
 
-					<section class="main__video video bg-white p-4 rounded shadow-sm">
-						<h3 class="video__title text-dark mb-3">Video presentación</h3>
+					<section class="main__video video animate-slide-in-right">
+				<h3 class="video__title animate-fade-in">Video presentación</h3>
 						<div class="video__container ratio ratio-16x9">
 							<iframe
 								class="video__iframe"
@@ -126,12 +122,11 @@
 								allowfullscreen></iframe>
 						</div>
 					</section>
-				</div>
 			</div>
 		</main>
 
-		<footer class="footer bg-dark text-white-50 py-3 mt-4 border-top shadow-sm">
-			<div class="container text-center">
+		<footer class="footer">
+			<div class="footer__container">
 				<span class="footer__copyright"
 					>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</span
 				>
