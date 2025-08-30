@@ -42,24 +42,24 @@ Este es un sitio web desarrollado como pre-entrega del curso de Full Stack de Co
 
 ```
 pre-entrega/
-├── index.html              # Página principal con carrusel Bootstrap
-├── styles.css              # CSS compilado desde SCSS
-├── styles.css.map          # Source map para debugging
-├── README.md               # Documentación completa del proyecto
+├── index.html                    # Página principal con carrusel Bootstrap
+├── styles.css                    # CSS compilado desde SCSS
+├── styles.css.map                # Source map para debugging
+├── README.md                     # Documentación completa del proyecto
 ├── pages/
-│   ├── about.html          # Página "Acerca de" con cards y video
-│   └── contact.html        # Página de contacto con modal CSS
-├── scss/                   # Arquitectura SCSS modular
-│   ├── styles.scss         # Archivo principal SCSS
-│   ├── _variables.scss     # Variables globales (colores, tipografía, etc.)
-│   ├── _mixins.scss        # Mixins y extends reutilizables
-│   ├── _base.scss          # Reset, tipografía base y contenedores
-│   ├── _components.scss    # Componentes específicos (hero, cards, etc.)
-│   ├── _animations.scss    # Keyframes y animaciones CSS
-│   └── _responsive.scss    # Media queries y responsive design
-└── assets/                 # Recursos del proyecto
-    ├── desarrollo-web.jpg  # Imagen para el artículo destacado
-    └── profile_image_new.jpeg # Foto de perfil para página About
+│   ├── about.html                # Página "Acerca de" con cards y video
+│   └── contact.html              # Página de contacto con modal CSS
+├── scss/                         # Arquitectura SCSS modular
+│   ├── styles.scss               # Archivo principal SCSS
+│   ├── _variables.scss           # Variables globales (colores, tipografía, etc.)
+│   ├── _mixins.scss              # Mixins y extends reutilizables
+│   ├── _base.scss                # Reset, tipografía base y contenedores
+│   ├── _components.scss          # Componentes específicos (hero, cards, etc.)
+│   ├── _animations.scss          # Keyframes y animaciones CSS
+│   └── _responsive.scss          # Media queries y responsive design
+└── assets/                       # Recursos del proyecto
+    ├── desarrollo-web.jpg        # Imagen para el artículo destacado
+    └── profile_image_new.jpeg    # Foto de perfil para página About
 ```
 
 ## 🎯 Páginas del Sitio
